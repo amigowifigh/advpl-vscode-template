@@ -1,0 +1,100 @@
+<!--
+/*---------------------------------------------------------------------------------------------
+*  Copyright (c) Eric Amodio & Alessandro Fragnani. All rights reserved.
+*  Licensed under the MIT License. See License.md in the project root for license information.
+*
+*  Original Author: Eric Amodio @ GitLens
+*  Modifications by: Alessandro Fragnani
+*--------------------------------------------------------------------------------------------*/
+-->
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+<link href="${cssUrl}" rel="stylesheet"></head>
+
+<body class="preload">
+
+    <div class="container">
+        <div class="content">
+            <header>
+                <a style="text-align: center;" title="Learn more about ${extensionDisplayName}" href="${repositoryUrl}">
+                    <img src="${headerLogo}" width="${headerWidth}%" height="${headerHeight}%"/>
+                </a>
+                <p class="header__blurb">
+                    ${headerMessage}
+                </p>
+                <blockquote class="header__blurb">
+                    <b>Aviso:</b> ${noticeMessage}
+                </blockquote>
+            </header>
+
+            <div class="section-groups">
+                <div class="section-group__content">
+
+                        <section id="whats-new" class="changelog">
+                                <h2 class="changelog__title">O que há de novo em <b>${extensionDisplayName} ${extensionVersion}</b></h2>
+                                <div class="changelog__scroller">
+                                    <ul class="changelog__list">
+                                        ${changeLog}
+                                    </ul>
+                                </div>
+                            </section>
+
+                </div>
+                <div class="section-group__sidebar section-group__sidebar--welcome">
+                    <div class="sidebar-group">
+                        <h2>Mostre seu Apoio!</h2>
+                        <!-- <p>
+                            While <b>${extensionDisplayName}</b> is offered for free,
+                            if you find it useful, please consider supporting it.
+                        </p> -->
+                        <!-- <div class="button-group button-group--support-alefragnani">
+                            <a class="button button--flat-primary" title="Become a sponsor on Patreon" href="https://www.patreon.com/KillerAll" target="_blank">Become a Sponsor</a>
+                            <a class="button button--flat-primary" title="Donate via PayPal" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=EP57F3B6FXKTU&lc=US&item_name=Alessandro%20Fragnani&item_number=vscode%20extensions&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donate_SM%2egif%3aNonHosted" target="_blank">Donate via PayPal</a>
+                        </div> -->
+                        <ul>
+                            <li><a title="Write a review" href="https://marketplace.visualstudio.com/items?itemName=KillerAll.${extensionName}&ssr=false#review-details">Nos avalie no Marketplace</a></li>
+                            <li><a title="Star or fork me on GitHub" href="${repositoryUrl}">Coloque uma estrela no GitHub</a></li>
+                            <!-- <li><a title="Follow me on Twitter" href="https://twitter.com/alefragnani">Follow me on Twitter</a></li> -->
+                        </ul>
+                        ${sponsors}
+                    </div>
+                    <div class="sidebar-group">
+                        <h2>Precisa de Ajuda?</h2>
+                        <ul>
+                            <li>
+                                <a href="${repositoryHomepage}">Página da Extensão</a>
+                            </li>
+                            <li>
+                                <a href="${repositoryIssues}">Perguntas & Problemas</a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/totvs/advpl-vscode/wiki">Wiki/Doc</a>
+                            </li>
+                            <li>
+                                <a href="https://marketplace.visualstudio.com/items/KillerAll.advpl-vscode/changelog">Log de Alterações</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="sidebar-group" style="max-width: 200px;">
+                        <h2 style="white-space: normal;">Aviso legal sobre o uso de Tokens e Chaves de compilação</h2>
+                        <p>
+                            As chaves de compilação ou tokens empregados na construção do Protheus e suas funcionalidades,
+                            são de uso restrito dos desenvolvedores de cada módulo.
+                            <br><br>
+                            Em caso de mau uso destas chaves ou tokens, por qualquer outra parte, que não a referida acima,
+                            a mesma irá se responsabilizar, direta ou regressivamente, única e exclusivamente, por todos os
+                            prejuízos, perdas, danos, indenizações, multas, condenações judiciais, arbitrais e administrativas
+                            e quaisquer outras despesas relacionadas ao mau uso, causados tanto à TOTVS, quanto a terceiros,
+                            eximindo a TOTVS de toda e qualquer responsabilidade.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+{
+    "src.ServerManagementView.CONTEXTVALID": "Esta opción solo se puede utilizar para un elemento de tipo de servicio.",
+    "src.ServerManagementView.CARREGANDO": "Cargando entornos...",
+    "src.ServerManagementView.INFORMELABEL": "Ingrese la etiqueta para cambiar.",
+    "src.ServerManagementView.LABELINUSE": "Esta etiqueta ya está en uso.",
+    "src.ServerManagementView.NAMEINUSE": "Esta etiqueta ya se está utilizando en un entorno.",
+    "src.ServerManagementView.DELETED": " eliminado",
+    "src.ServerManagementView.environmentText": "Environment ",
+    "src.ServerManagementView.yesText": "Si",
+    "src.ServerManagementView.noText": "No",
+    "src.ServerManagementView.environmentSelectedText": " la selección se realizó correctamente",
+    "src.ServerManagementView.RENAME": "Renombrar",
+    "src.ServerManagementView.passwordChangedSuccess": "La contraseña del entorno %ENV_NAME% se modificó correctamente."
+}
