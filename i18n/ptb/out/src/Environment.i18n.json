@@ -1,0 +1,5 @@
+{
+	"src.Environment.userNotFilledText": "Usuário não preenchido!",
+	"src.Environment.serverNotFilledText": "Servidor not filled!",
+	"src.Environment.cipherNotFilledText": "Cipher not filled!"
+}

@@ -1,0 +1,206 @@
+{
+	"Protheus doc" : {
+			"prefix": "protheusdoc"
+		,	"body": [
+				"//-------------------------------------------------------------------"
+			,	"/*/{Protheus.doc} ${1:function}"
+			,	"${2:description}"
+			,	"@author  ${3:author}"
+			,	"@since   ${4:date}"
+			,	"@version ${5:version}"
+			,	"/*/"
+			,	"//-------------------------------------------------------------------"
+			]
+		,	"description": "Protheus doc"
+	},
+	
+	"If": {
+		"prefix": "if",
+		"body": [
+		"If ${1:lCond}",
+			"\t$2",
+		"EndIf",
+		"$0"
+		],
+		"description": "If Statement"
+	},
+	
+	"If Else": {
+		"prefix": "ifelse",
+		"body": [
+		"If ${1:lCond}",
+			"\t$2",
+		"Else",
+			"\t$3",
+		"EndIf",
+		"$0"
+		],
+		"description": "If Else Statement"
+	},
+
+	"If ElseIf": {
+		"prefix": "ifelseif",
+		"body": [
+		"If ${1:lCond1}",
+			"\t$2",
+		"ElseIf ${3:lCond2}",
+			"\t$4",
+		"EndIf",
+		"$0"
+		],
+		"description": "If ElseIf Statement"
+	},
+	
+	"While": {
+		"prefix": "while",
+		"body": [
+		"While (${1:lCond})",
+			"\t$2",
+		"End",
+		"$0"
+		],
+		"description": "While Statement"
+	},
+
+	"For": {
+		"prefix": "for",
+		"body": [
+		"For ${1:nX}:= 1 to Len(${2:aArray})",
+			"\t$3",
+		"Next",
+		"$0"
+		],
+		"description": "For Statement"
+	},
+	"Query":{
+		"prefix": "Query",
+		"body":[
+		"Local ${1:cQuery} := ''",
+			"\t${1:cQuery} := 'query'",
+			"\t${1:cQuery} := ChangeQuery(${1:cQuery})",
+		"dbUseArea(.T., 'TOPCONN', TCGenQry(, , ${1:cQuery}), alias, .F., .T.)",
+		"While alias->(!Eof())",
+			"\t$2",
+			"\talias->(dbSkip())",
+		"EndDo",
+		"alias->(dbCloseArea())"
+		],
+		"description": "Cria a função de Query ja efetuando a conexão com o TOP e efetuando o While"
+	},
+    "Help":{
+        "prefix": "Help",
+        "body":[
+			 
+              "HELP(' ',1,${1:cabecalho} ,,${2:descricao},2,0,,,,,, ${3:solucao})"
+        ],
+        "description":"Função de Help\nExemplo\nHELP(' ',1,'Help1' ,,'campo nao preenchido',2,0,,,,,, {'preencha o campo'})"
+    },
+	"Static Function":{
+		"prefix": "StaticFunction",
+		"body":[
+			"/*/{Protheus.doc} ${1:nomeStaticFunction}",
+			"\t(long_description)",
+			"\t@type  Static Function",
+			"\t@author ${2:user}",
+			"\t@since ${3:date}",
+			"\t@version ${4:version}",
+			"\t@param ${5:param}, ${6:param_type}, ${7:param_descr}",
+			"\t@return ${8:return}, ${9:return_type}, ${10:return_description}",
+			"\t@example",
+			"\t(examples)",
+			"\t@see (links_or_references)",
+			"\t/*/",
+			" Static Function ${1:nomeStaticFunction}",
+			"Return ${8:return}"
+
+
+		],
+		"description": "Declaração de uma Static Function ja com o Protheus.doc"
+		
+	},
+	"Function":{
+		"prefix": "Function",
+		"body":[
+			"/*/{Protheus.doc} ${1:nomeFunction}",
+			"\t(long_description)",
+			"\t@type  Function",
+			"\t@author ${2:user}",
+			"\t@since ${3:date}",
+			"\t@version ${4:version}",
+			"\t@param ${5:param}, ${6:param_type}, ${7:param_descr}",
+			"\t@return ${8:return}, ${9:return_type}, ${10:return_description}",
+			"\t@example",
+			"\t(examples)",
+			"\t@see (links_or_references)",
+			"\t/*/",
+			" Function ${1:nomeFunction}",
+			"Return ${8:return}"
+
+
+		],
+		"description": "Declaração de uma Function ja com o Protheus.doc"
+	},
+	 "Strtokarr2": {
+        "prefix": "Strtokarr2",
+        "body": [
+            "Strtokarr2( ${1:cValue}, ${2:cToken}, ${3:lEmptyStr})"
+        ],
+        "description": "Strtokarr2- Transforma uma String em um array,\n cValue := Caracter a ser separado\n cToken := Caracter a ser ultilizado na quebra \n lEmptyStr:= Se retorna elementos vazios" 					
+	 },
+	 "Year": {
+        "prefix": "Year",
+        "body": [
+            "Year( ${1:dData})"
+        ],
+        "description": "Year - Retorna o Ano no formato 'AAAA' da data informada"
+    },
+	 "Type": {
+        "prefix": "Type",
+        "body": [
+            "Type( ${1:cVariavel})"
+        ],
+        "description": "Type() - Retorna o tipo de dado de uma expressao ou variavel."
+    },
+	 "ValType": {
+        "prefix": "ValType",
+        "body": [
+            "ValType( ${1:cVariavel})"
+        ],
+        "description":  "Valtype() - Retorna o tipo de dado de uma expressao ou variavel."						
+	 },
+	 "ComputerName": {
+        "prefix": "ComputerName",
+        "body": [
+            "ComputerName()"
+        ],
+        "description": "ComputerName() - Retorna o nome do computador em que o SmartClient esta sendo executado"
+    },
+	"ConOut": {
+        "prefix": "ConOut",
+        "body": [
+            "ConOut( ${1:cText})"
+        ],
+        "description": "ConOut() - Apresenta no console, do Application Server, uma mensagem."
+	},
+	"Decode64": {
+        "prefix": "Decode64",
+        "body": [
+            "Decode64( ${1:cText})"
+        ],
+        "description": "Decode64() - Converte uma string de Base64 para Base ASCII"
+    },
+	"Encode64": {
+        "prefix": "Encode64",
+        "body": [
+            "Encode64( ${1:cText})"
+        ],
+        "description": "Encode64() - Converte uma string de ASCII para base64"
+    },
+	 "FindFunction": {
+        "prefix": "FindFunction",
+        "body": [
+            "FindFunction( ${1:cFunction})"
+        ],
+        "description": "FindFunction() - Faz a busca de uma determinada função no rpo ou no binário"
+	 }
+}
