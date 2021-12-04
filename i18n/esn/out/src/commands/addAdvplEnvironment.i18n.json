@@ -1,0 +1,17 @@
+{
+	"src.commands.addAdvplEnvironment.envAppserverText": "Ambiente AppServer",
+	"src.commands.addAdvplEnvironment.envExistsErrorText": " ya configurado para este servidor de aplicaciones",
+	"src.commands.addAdvplEnvironment.mandatoryText": "Obligatorio!",
+	"src.commands.addAdvplEnvironment.nameText": "Nombre",
+	"src.commands.addAdvplEnvironment.existsText": " ya está registrado!",
+	"src.commands.addAdvplEnvironment.smartclientPathText": "Ruta del Smartclient",
+	"src.commands.addAdvplEnvironment.appserverVersionText": "Versión AppServer",
+	"src.commands.addAdvplEnvironment.serverIpText": "IP del AppServer",
+	"src.commands.addAdvplEnvironment.appserverPortText": "Puerto del AppServer",
+	"src.commands.addAdvplEnvironment.userText": "Usuario",
+	"src.commands.addAdvplEnvironment.passwordText": "Contraseña",
+	"src.commands.addAdvplEnvironment.includeListText": "Lista de includes",
+	"src.commands.addAdvplEnvironment.enable": "Entorno habilitado para uso?",
+	"src.extension.yesText": "Si",
+	"src.extension.noText": "No"
+}
